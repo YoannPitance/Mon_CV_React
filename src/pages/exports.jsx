@@ -1,4 +1,4 @@
-export { default as Knowledges } from "./Knowledges";
+export { default as Skills } from "./Skills";
 export { default as Contact } from "./Contact";
 export { default as Home } from "./Home";
 export { default as Notfound } from "./Notfound";

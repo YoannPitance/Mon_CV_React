@@ -1,14 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import {
-  Knowledges,
-  Home,
-  Contact,
-  Notfound,
-  Portfolio,
-  Layout,
-} from "./exports";
+import { Skills, Home, Contact, Notfound, Portfolio, Layout } from "./exports";
 
 const Router = () => {
   return (
@@ -17,7 +10,7 @@ const Router = () => {
         <Route index element={<Home />} />
 
         <Route path="/home" element={<Home />} />
-        <Route path="/knowledges" element={<Knowledges />} />
+        <Route path="/skills" element={<Skills />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/notfound" element={<Notfound />} />
         <Route path="/portfolio" element={<Portfolio />} />
