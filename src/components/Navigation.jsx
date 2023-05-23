@@ -62,6 +62,50 @@ const Navigation = () => {
           </li>
         </ul>
       </div>
+
+      <div className="socialNetwork">
+        <ul>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/yoann-pitance-8a974324b"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/YoannPitance"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/_pittyart_/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/Pittyart88/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <i class="fa-brands fa-square-facebook"></i>
+            </a>
+          </li>
+        </ul>
+        <div className="signature">
+          <p>yoannPitance - 2023 -</p>
+        </div>
+      </div>
     </div>
   );
 };
