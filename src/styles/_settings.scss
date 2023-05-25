@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Source+Code+Pro:wght@400;500;700&display=swap');
+;
+
+$font-1: "Roboto Mono", cursive;
+$font-2: "Source Code", sans-serif;
+
+$color-1: #0b162c;
+$color-2: #1c2942;
+$color-3: #3b556d;
+$color-4: #5fc2ba;
+$white: #ddd;
+$black: #333;
+
+$borderRadius: 25px;
+$shadow: 0 1px 3px;
+$min-height: 95vh;
+
+@mixin verticalCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 1rem auto;
+    max-width: 1200px;
+    font-family: $font-1;
+    color: $black;
+}
+button{
+    cursor: pointer;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: $black;
+    cursor: pointer;
+}
+a:visited{
+    color: $black;
+}
+
+.home, .skills, .portfolio, .contact{
+    display: flex;
+    @media screen and (max-width: 850px) {
+    display: block !important;
+    }
+} 
+
