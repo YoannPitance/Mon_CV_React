@@ -13,7 +13,7 @@ $black: #333;
 
 $borderRadius: 25px;
 $shadow: 0 1px 3px;
-$min-height: 95vh;
+$minHeight: 95vh;
 
 @mixin verticalCenter {
     display: flex;
@@ -52,4 +52,12 @@ a:visited{
     display: block !important;
     }
 } 
+
+.homeContent, .skillsContent, .portfolioContent, .contactContent{
+    margin-left: 0.4rem;
+
+    @media screen and (max-width: 850px){
+        margin-left: 0 !important;
+    }
+}
 
