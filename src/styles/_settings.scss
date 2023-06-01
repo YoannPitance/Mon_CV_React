@@ -8,6 +8,7 @@ $color-1: #0b162c;
 $color-2: #1c2942;
 $color-3: #3b556d;
 $color-4: #5fc2ba;
+$color-5: #4383a1;
 $white: #ddd;
 $black: #333;
 
@@ -25,11 +26,16 @@ $minHeight: 95vh;
     margin: 0;
     padding: 0;
 }
+
 body {
+    
     margin: 1rem auto;
     max-width: 1200px;
     font-family: $font-1;
     color: $black;
+}
+.layout{
+    display: flex;
 }
 button{
     cursor: pointer;
