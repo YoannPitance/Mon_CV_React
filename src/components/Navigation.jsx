@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
@@ -14,7 +14,7 @@ const Navigation = () => {
       <div className="navigation">
         <ul>
           <li>
-            <NavLink
+            <Link
               to="/Home"
               className={({ isActive, isPending }) =>
                 isPending ? "navdefaut" : isActive ? "navActive" : ""
@@ -22,11 +22,11 @@ const Navigation = () => {
             >
               <i class="fa-solid fa-house"></i>
               <span>Accueil</span>
-            </NavLink>
+            </Link>
           </li>
 
           <li>
-            <NavLink
+            <Link
               to="/Skills"
               className={({ isActive, isPending }) =>
                 isPending ? "navdefaut" : isActive ? "navActive" : ""
@@ -34,11 +34,11 @@ const Navigation = () => {
             >
               <i class="fa-solid fa-screwdriver-wrench"></i>
               <span>Compétences</span>
-            </NavLink>
+            </Link>
           </li>
 
           <li>
-            <NavLink
+            <Link
               to="/Portfolio"
               className={({ isActive, isPending }) =>
                 isPending ? "navdefaut" : isActive ? "navActive" : ""
@@ -46,11 +46,11 @@ const Navigation = () => {
             >
               <i class="fa-solid fa-images"></i>
               <span>Portfolio</span>
-            </NavLink>
+            </Link>
           </li>
 
           <li>
-            <NavLink
+            <Link
               to="/Contact"
               className={({ isActive, isPending }) =>
                 isPending ? "navdefaut" : isActive ? "navActive" : ""
@@ -58,7 +58,7 @@ const Navigation = () => {
             >
               <i class="fa-solid fa-address-card"></i>
               <span>Contact</span>
-            </NavLink>
+            </Link>
           </li>
         </ul>
       </div>
