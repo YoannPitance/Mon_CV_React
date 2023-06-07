@@ -10,7 +10,7 @@ export default class Languages extends Component {
     ],
     frameworks: [
       { id: 1, value: "Sass", xp: 0.8 },
-      { id: 1, value: "React", xp: 0.4 },
+      { id: 1, value: "React", xp: 0.5 },
       { id: 1, value: "React Native", xp: 0.2 },
     ],
   };

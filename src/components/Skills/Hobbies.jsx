@@ -3,7 +3,7 @@ import React from "react";
 const Hobbies = () => {
   return (
     <div className="hobbies">
-      <h3>Intérets et loisirs</h3>
+      <h3>Loisirs</h3>
       <ul>
         <li>
           <i class="fa-solid fa-palette"></i>Arts graphiques
@@ -15,7 +15,7 @@ const Hobbies = () => {
           <i class="fa-solid fa-children"></i>Famille
         </li>
         <li>
-          <i class="fa-solid fa-atom"></i>Science et technologies
+          <i class="fa-solid fa-atom"></i>Science / Tech
         </li>
         <li>
           <i class="fa-solid fa-gamepad"></i>Jeux vidéos
@@ -24,7 +24,7 @@ const Hobbies = () => {
           <i class="fa-solid fa-film"></i>Cinéma
         </li>
         <li>
-          <i class="fa-solid fa-mountain-sun"></i>Nature et environnement
+          <i class="fa-solid fa-mountain-sun"></i>Nature
         </li>
       </ul>
     </div>

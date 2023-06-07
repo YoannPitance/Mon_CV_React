@@ -12,9 +12,7 @@ const Experiences = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet unde
           quam aspernatur nam, id amet suscipit eum numquam sed corrupti
           repudiandae soluta natus quis possimus reprehenderit ab modi dolorum
-          itaque pariatur repellendus. Reiciendis exercitationem nostrum libero
-          quod suscipit natus eos nemo, commodi at temporibus possimus officia
-          quae beatae ut error?
+          itaque pariatur repellendus.
         </p>
       </div>
       <div className="exp-2">
@@ -26,8 +24,7 @@ const Experiences = () => {
           obcaecati deserunt tempore veniam at est commodi aspernatur explicabo
           doloremque magni, impedit fuga porro aperiam ullam quod ipsa quo
           veritatis, facere optio minima accusantium consequatur assumenda
-          corrupti magnam. Culpa perspiciatis sint optio ducimus officiis
-          numquam provident, quis a dolores doloribus reprehenderit.
+          corrupti magnam.
         </p>
       </div>
     </div>
