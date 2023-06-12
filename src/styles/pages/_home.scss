@@ -19,6 +19,7 @@
     }
 
     .content{
+
         position: absolute;
         top: 20%;
         left: 12%;
@@ -27,27 +28,44 @@
         h1{
             font-size: 5rem;
             color: $color-4;
-            text-shadow: 3px 6px 2px $black;
+            text-shadow: 2px 3px 2px $white;
         }
         h2{
             font-size: 2.5rem;
             padding: 1.5rem 0 7rem;
             color: $color-5;
-            text-shadow: 1px 4px 1px $black;
+            text-shadow: 1px 2px 1px $white;
         }
         .pdf{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             a{
                 font-size: 1.5rem;
                 background: $color-5;
                 padding: 1rem 2rem;
                 border-radius: $borderRadius;
-                box-shadow: 0 5px 1px $black;
+                box-shadow: 0 2px 1px $white;
                 transition: 0.2s ease;
             &:hover{
                 background: $color-4;
                 }
             }
         }
+        .introCardBtn{            
+            a{
+                font-size: 1.5rem;
+                background: $color-5;
+                padding: 1rem 2rem;
+                border-radius: $borderRadius;
+                box-shadow: 0 2px 1px $white;
+                transition: 0.2s ease;
+                &:hover{
+                    background: $color-4;
+                    }
+            }
+        }
+
     }
 }
 @media screen and (max-width: 850px) {

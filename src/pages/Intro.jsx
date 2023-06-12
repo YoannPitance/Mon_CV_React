@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 export default function Intro() {
   const cardRef = useRef(null);
@@ -37,13 +38,18 @@ export default function Intro() {
   }, []);
 
   return (
-    <div className="cardContainer">
-      <div className="card" ref={cardRef}>
-        <div className="cardContent">
-          <img src="./media/moi2.jpg" alt="ma tête de bg!" />
+    <div className="bodyIntro">
+      <Link to="/home">
+        <div className="cardContainer">
+          <div className="card" ref={cardRef}>
+            <div className="cardContent front">
+              <img src="./media/moi1.jpg" alt="ma tête de bg!" />
+            </div>
+            <div className="cardContent back"></div>
+            <div className="glare"></div>
+          </div>
         </div>
-        <div className="glare"></div>
-      </div>
+      </Link>
     </div>
   );
 }
