@@ -42,7 +42,9 @@ export default function Intro() {
       <div className="congrats">
         <h1>FÉLICITATIONS!</h1>
         <h2>vous venez de découvrir une carte "Rare"</h2>
-        <h3>Cliquez sur la carte pour en savoir plus!</h3>
+        <div className="blink">
+          <h3>Cliquez sur la carte pour en savoir plus!</h3>
+        </div>
       </div>
       <Link to="/home">
         <div className="cardContainer">
