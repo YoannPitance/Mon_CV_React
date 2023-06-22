@@ -1,5 +1,5 @@
 .sidebar{
-    background: rgba(7, 32, 56, 0.7);
+    background: rgba(7, 32, 56, 0.8);
     
     border-top: 1px solid $white;
     border-left: 1px solid $white;
@@ -101,19 +101,34 @@
             transition: 0.3s;
             cursor: pointer;
 
-            &:hover{
+            &:hover {
                 background: $white;
+                box-shadow: 0 0 10px $white,
+                0 0 20px $white,
+                0 0 40px $white,
+                0 0 60px $white;                               
             }
         }
     }
+
+    .socialName{
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        
+        p{
+            color: $white;
+        }
+    }
     .signature{
-        margin-top: 2rem;
+        margin-top: 52px;
         text-align: center;
         letter-spacing: 0.1rem;
-        font-size: 0.7rem;
+        font-size: 0.6rem;
 
         p{
-            color: $color-3;
+            color: $color-4;
         }
 
     }
