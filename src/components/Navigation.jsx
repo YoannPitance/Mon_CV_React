@@ -1,10 +1,17 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navigation = () => {
+  const [activeLink, setActiveLink] = useState("");
   const [socialName, setSocialName] = useState("");
+  const location = useLocation();
+
   const handleHover = (className) => {
     setSocialName(className);
+  };
+
+  const handleClick = (link) => {
+    setActiveLink(link);
   };
 
   return (
@@ -18,48 +25,44 @@ const Navigation = () => {
 
       <div className="navigation">
         <ul>
-          <li>
+          <li className={location.pathname === "/Home" ? "navActive" : ""}>
             <Link
               to="/Home"
-              className={({ isActive, isPending }) =>
-                isPending ? "navdefaut" : isActive ? "navActive" : ""
-              }
+              onClick={() => handleClick("Home")}
+              className={activeLink === "Home" ? "navActive" : ""}
             >
               <i className="fa-solid fa-house"></i>
               <span>Accueil</span>
             </Link>
           </li>
 
-          <li>
+          <li className={location.pathname === "/Skills" ? "navActive" : ""}>
             <Link
               to="/Skills"
-              className={({ isActive, isPending }) =>
-                isPending ? "navdefaut" : isActive ? "navActive" : ""
-              }
+              onClick={() => handleClick("Skills")}
+              className={activeLink === "Skills" ? "navActive" : ""}
             >
               <i className="fa-solid fa-screwdriver-wrench"></i>
               <span>Compétences</span>
             </Link>
           </li>
 
-          <li>
+          <li className={location.pathname === "/Portfolio" ? "navActive" : ""}>
             <Link
               to="/Portfolio"
-              className={({ isActive, isPending }) =>
-                isPending ? "navdefaut" : isActive ? "navActive" : ""
-              }
+              onClick={() => handleClick("Portfolio")}
+              className={activeLink === "Portfolio" ? "navActive" : ""}
             >
               <i className="fa-solid fa-images"></i>
               <span>Portfolio</span>
             </Link>
           </li>
 
-          <li>
+          <li className={location.pathname === "/Contact" ? "navActive" : ""}>
             <Link
               to="/Contact"
-              className={({ isActive, isPending }) =>
-                isPending ? "navdefaut" : isActive ? "navActive" : ""
-              }
+              onClick={() => handleClick("Contact")}
+              className={activeLink === "Contact" ? "navActive" : ""}
             >
               <i className="fa-solid fa-address-card"></i>
               <span>Contact</span>
