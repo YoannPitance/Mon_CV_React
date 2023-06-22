@@ -7,6 +7,11 @@ const Home = () => {
       <div className="content">
         <h1>Yoann Pitance</h1>
         <h2>Développeur Web</h2>
+        <h3>En recherche d'alternance (bac+3):</h3>
+        <ul>
+          <li>Développeur React Javascipt</li>
+          <li>Développeur PHP Symphony</li>
+        </ul>
         <div className="pdf">
           <a href="./media/cv_1.pdf" target="_blank" rel="noreferrer">
             Télécharger CV
