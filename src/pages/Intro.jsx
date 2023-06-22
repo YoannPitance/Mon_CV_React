@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
-export default function Intro() {
+const Intro = () => {
   const cardRef = useRef(null);
 
   useEffect(() => {
@@ -38,53 +38,26 @@ export default function Intro() {
   }, []);
 
   return (
-    <>
-      <div className="background">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+    <div className="bodyIntro">
+      <div className="congrats">
+        <h1>FÉLICITATIONS!</h1>
+        <h2>Vous venez de découvrir une carte "Rare"</h2>
+        <div className="blink">
+          <h3>Cliquez sur la carte pour en savoir plus !</h3>
+        </div>
       </div>
-      <div className="bodyIntro">
-        <div className="congrats">
-          <h1>FÉLICITATIONS!</h1>
-          <h2>vous venez de découvrir une carte "Rare"</h2>
-          <div className="blink">
-            <h3>Cliquez sur la carte pour en savoir plus!</h3>
+      <Link to="/home">
+        <div className="cardContainer">
+          <div className="card" ref={cardRef}>
+            <div className="cardContent">
+              <img src="./media/moi1.webp" alt="ma tête de bg!" />
+            </div>
+            <div className="glare"></div>
           </div>
         </div>
-        <Link to="/home">
-          <div className="cardContainer">
-            <div className="card" ref={cardRef}>
-              <div className="cardContent">
-                <img src="./media/moi1.jpg" alt="ma tête de bg!" />
-              </div>
-              <div className="glare"></div>
-            </div>
-          </div>
-        </Link>
-      </div>
-    </>
+      </Link>
+    </div>
   );
-}
+};
+
+export default Intro;

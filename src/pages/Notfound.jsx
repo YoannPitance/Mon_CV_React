@@ -7,7 +7,7 @@ const Notfound = () => {
       <div className="notFoundContent">
         <h3>Désolé cette page n'existe pas...</h3>
         <NavLink to="/home">
-          <i class="fa-solid fa-house"></i>
+          <i className="fa-solid fa-house"></i>
           <span> Retourner à l'accueil</span>
         </NavLink>
       </div>

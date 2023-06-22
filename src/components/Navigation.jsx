@@ -20,7 +20,7 @@ const Navigation = () => {
                 isPending ? "navdefaut" : isActive ? "navActive" : ""
               }
             >
-              <i class="fa-solid fa-house"></i>
+              <i className="fa-solid fa-house"></i>
               <span>Accueil</span>
             </Link>
           </li>
@@ -32,7 +32,7 @@ const Navigation = () => {
                 isPending ? "navdefaut" : isActive ? "navActive" : ""
               }
             >
-              <i class="fa-solid fa-screwdriver-wrench"></i>
+              <i className="fa-solid fa-screwdriver-wrench"></i>
               <span>Compétences</span>
             </Link>
           </li>
@@ -44,7 +44,7 @@ const Navigation = () => {
                 isPending ? "navdefaut" : isActive ? "navActive" : ""
               }
             >
-              <i class="fa-solid fa-images"></i>
+              <i className="fa-solid fa-images"></i>
               <span>Portfolio</span>
             </Link>
           </li>
@@ -56,7 +56,7 @@ const Navigation = () => {
                 isPending ? "navdefaut" : isActive ? "navActive" : ""
               }
             >
-              <i class="fa-solid fa-address-card"></i>
+              <i className="fa-solid fa-address-card"></i>
               <span>Contact</span>
             </Link>
           </li>
@@ -68,37 +68,41 @@ const Navigation = () => {
           <li>
             <a
               href="https://www.linkedin.com/in/yoann-pitance-8a974324b"
+              className="linkedin"
               rel="noreferrer"
               target="_blank"
             >
-              <i class="fa-brands fa-linkedin"></i>
+              <i className="fa-brands fa-linkedin" alt="Linkedin"></i>
             </a>
           </li>
           <li>
             <a
               href="https://github.com/YoannPitance"
+              className="github"
               rel="noreferrer"
               target="_blank"
             >
-              <i class="fa-brands fa-github"></i>
+              <i className="fa-brands fa-github" alt="github"></i>
             </a>
           </li>
           <li>
             <a
               href="https://www.instagram.com/_pittyart_/"
+              className="instagram"
               rel="noreferrer"
               target="_blank"
             >
-              <i class="fa-brands fa-instagram"></i>
+              <i className="fa-brands fa-instagram" alt="instagram"></i>
             </a>
           </li>
           <li>
             <a
               href="https://www.facebook.com/Pittyart88/"
+              className="facebook"
               rel="noreferrer"
               target="_blank"
             >
-              <i class="fa-brands fa-square-facebook"></i>
+              <i className="fa-brands fa-square-facebook" alt="facebook"></i>
             </a>
           </li>
         </ul>

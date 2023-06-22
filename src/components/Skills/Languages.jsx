@@ -5,13 +5,13 @@ export default class Languages extends Component {
   state = {
     languages: [
       { id: 1, value: "Html", xp: 1 },
-      { id: 1, value: "Css", xp: 1 },
-      { id: 1, value: "Javascript", xp: 0.6 },
+      { id: 2, value: "Css", xp: 1 },
+      { id: 3, value: "Javascript", xp: 0.6 },
     ],
     frameworks: [
       { id: 1, value: "Sass", xp: 0.8 },
-      { id: 1, value: "React", xp: 0.5 },
-      { id: 1, value: "React Native", xp: 0.2 },
+      { id: 2, value: "React", xp: 0.5 },
+      { id: 3, value: "React Native", xp: 0.2 },
     ],
   };
   render() {

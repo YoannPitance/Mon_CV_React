@@ -1,7 +1,5 @@
-.homeContent{
-    background: rgba(90, 91, 189, 0.1);
-    -webkit-backdrop-filter: blur(40px);
-            backdrop-filter: blur(40px);
+.homeContent{ 
+    background: rgba(7, 32, 56, 0.5);  
     box-shadow: 5px 5px 15px 5px #0f0f0f;
     border-top: 1px solid $white;
     border-left: 1px solid $white;
@@ -38,27 +36,35 @@
             align-items: center;
             a{
                 font-size: 1.5rem;
-                background: $color-5;
+                background: rgb(211, 140, 18, 0.8); 
                 padding: 1rem 2rem;
                 border-radius: $borderRadius;
                 box-shadow: 0 2px 1px $white;
-                transition: 0.2s ease;
+                transition: 0.5s ease;
             &:hover{
                 background: $color-4;
+                box-shadow: 0 0 10px $color-4,
+                0 0 20px $color-4,
+                0 0 60px $color-4,
+                0 0 80px $color-4;
                 }
             }
         }
         .introCardBtn{            
             a{
                 font-size: 1.5rem;
-                background: $color-5;
+                background: rgb(211, 140, 18, 0.8);   
                 padding: 1rem 2rem;
                 border-radius: $borderRadius;
                 box-shadow: 0 2px 1px $white;
-                transition: 0.2s ease;
-                &:hover{
-                    background: $color-4;
-                    }
+                transition: 0.5s ease;
+            &:hover {
+                background: $color-4;
+                box-shadow: 0 0 10px $color-4,
+                0 0 20px $color-4,
+                0 0 60px $color-4,
+                0 0 80px $color-4;
+                }
             }
         }
 

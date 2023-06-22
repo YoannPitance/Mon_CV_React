@@ -11,7 +11,7 @@
     "O O H";
 
     .languagesFrameworks, .experiences, .otherSkills, .hobbies{
-        background: $color-4;
+        background: rgb(95, 194, 186, 0.7);
         border-radius: $borderRadius;
         padding: 0.8rem;
     }
@@ -21,6 +21,7 @@
         font-family: $font-1;
         color: $color-1;
         text-transform: uppercase;
+        text-shadow: 2px 1px 2px#d38c12;
     }
     .languagesFrameworks{
         grid-area: L;
@@ -132,11 +133,15 @@
         }
         h4{
             font-size: 1.1rem;
-            color: $color-3;
+            color: $white;
+            text-shadow: 2px 1px 2px $color-2;
+
         }
         h5{
-            color: $color-3;
+            color: $white;
             padding: 0.5rem 0 0.5rem 1rem;
+            text-shadow: 2px 1px 2px $color-2;
+
         }
         p{
             text-align: justify;
@@ -156,7 +161,7 @@
         .list{
             display: flex;
             width: 80%;
-            height: 100%;
+            height: auto;
             margin: 0 auto;
             justify-content: space-between;
             flex-wrap: wrap;
@@ -172,6 +177,7 @@
 
                 svg{
                     color: $color-2;
+                    margin-right: 10px;
                 }
             }
         }
@@ -184,17 +190,11 @@
             height: 80%;
             display: grid; 
             
-            li{
-                svg{
-                    position: absolute;
-                    color: $color-2;
-                }
-                span{
-                    position: absolute;
-                    transform: translateX(2.2rem);
-                }
-            }
-        }
+            svg{                
+                color: $color-2; 
+                margin-right: 10px;           
+            }          
+        }       
     }    
 }
 
