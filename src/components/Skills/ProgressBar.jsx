@@ -1,24 +1,65 @@
 import React from "react";
 
-const ProgressBar = (languages, frameworks) => {
+const ProgressBar = (languages) => {
+  const calculateExperience = (startDate) => {
+    const currentDate = new Date();
+    const startYear = startDate.getFullYear();
+    const startMonth = startDate.getMonth() + 1; // +1 car les mois commencent à partir de 0
+
+    const totalMonths =
+      (currentDate.getFullYear() - startYear) * 12 +
+      (currentDate.getMonth() + 1 - startMonth);
+
+    return totalMonths;
+  };
+
+  const calculateDisplayExperience = (experience) => {
+    if (experience < 24) {
+      return `0 - 2 ans`;
+    } else {
+      const startYear = Math.floor((experience - 12) / 12);
+      const endYear = Math.floor(experience / 12);
+
+      return `${startYear} - ${endYear} ans`;
+    }
+  };
+
+  const calculateProgressBarWidth = (experience) => {
+    if (experience < 24) {
+      return (experience / 24) * 100;
+    } else {
+      const monthsAfterTwoYears = experience - 24;
+      const remainingMonths = monthsAfterTwoYears % 12;
+      const progressBarWidth = (remainingMonths / 12) * 100;
+
+      return progressBarWidth;
+    }
+  };
+
   return (
     <div className={languages.className}>
       <h3>{languages.title}</h3>
-      <div className="years">
-        <span>Années d'expérience</span>
-        <span>1 an</span>
-        <span>2 ans</span>
-      </div>
 
       <div>
-        {languages.languages.map((item) => {
-          let xpYears = 2;
-          let progressBar = (item.xp / xpYears) * 100 + "%";
+        {languages.languages?.map((item) => {
+          const experience = calculateExperience(item.startDate);
+          const displayExperience = calculateDisplayExperience(experience);
+          const progressBarWidth = calculateProgressBarWidth(experience);
 
           return (
             <div key={item.id} className="languagesList">
-              <li>{item.value}</li>
-              <div className="progressBar" style={{ width: progressBar }}></div>
+              <h4>{item.value}</h4>
+              <div className="progressBar">
+                <div
+                  className="progressBarFill"
+                  style={{
+                    width: `${progressBarWidth}%`,
+                    transition: "width 0.5s ease-in-out",
+                  }}
+                ></div>
+                <div className="progressBarEmpty"></div>
+                <span>{displayExperience}</span>
+              </div>
             </div>
           );
         })}

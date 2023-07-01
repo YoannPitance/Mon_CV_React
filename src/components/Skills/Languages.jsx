@@ -1,35 +1,59 @@
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
 import ProgressBar from "./ProgressBar";
 
-export default class Languages extends Component {
-  state = {
-    languages: [
-      { id: 1, value: "Html", xp: 1 },
-      { id: 2, value: "Css", xp: 1 },
-      { id: 3, value: "Javascript", xp: 0.6 },
-    ],
-    frameworks: [
-      { id: 1, value: "Sass", xp: 0.8 },
-      { id: 2, value: "React", xp: 0.5 },
-      { id: 3, value: "React Native", xp: 0.2 },
-    ],
-  };
-  render() {
-    let { languages, frameworks } = this.state;
+const Languages = () => {
+  const [languages, setLanguages] = useState([
+    { id: 1, value: "Html", startDate: new Date(2022, 4) },
+    { id: 2, value: "Css", startDate: new Date(2022, 4) },
+    { id: 3, value: "Javascript", startDate: new Date(2022, 10) },
+  ]);
+  const [frameworks, setFrameworks] = useState([
+    { id: 1, value: "Sass", startDate: new Date(2022, 9) },
+    { id: 2, value: "React", startDate: new Date(2023, 0) },
+    { id: 3, value: "React Native", startDate: new Date(2023, 3) },
+  ]);
 
-    return (
-      <div className="languagesFrameworks">
-        <ProgressBar
-          languages={languages}
-          className="languageDisplay"
-          title="langages"
-        />
-        <ProgressBar
-          languages={frameworks}
-          className="frameworksDisplay"
-          title="Frameworks & Bibliothèques"
-        />
-      </div>
-    );
-  }
-}
+  useEffect(() => {
+    const currentDate = new Date();
+
+    const updateExperience = (data) =>
+      data.map((item) => ({
+        ...item,
+        xp: calculateExperience(item.startDate, currentDate),
+      }));
+
+    const calculateExperience = (startDate, endDate, totalYears) => {
+      const totalMonths = Math.round(
+        (endDate - startDate) / (1000 * 60 * 60 * 24 * 30.44) // Calcul de la durée en mois
+      );
+      const percentage = (totalMonths / (totalYears * 12)) * 100; // Conversion en pourcentage
+      return percentage;
+    };
+
+    setLanguages(updateExperience(languages));
+    setFrameworks(updateExperience(frameworks));
+  }, [languages, frameworks]);
+
+  return (
+    <div className="languagesFrameworks">
+      <ProgressBar
+        languages={languages.map((lang) => ({
+          ...lang,
+          xp: lang.xp + " mois",
+        }))}
+        className="languageDisplay"
+        title="Langages"
+      />
+      <ProgressBar
+        languages={frameworks.map((framework) => ({
+          ...framework,
+          xp: framework.xp + " mois",
+        }))}
+        className="frameworksDisplay"
+        title="Frameworks & Bibliothèques"
+      />
+    </div>
+  );
+};
+
+export default Languages;
