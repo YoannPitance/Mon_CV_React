@@ -10,7 +10,7 @@ const Languages = () => {
   const [frameworks, setFrameworks] = useState([
     { id: 1, value: "Sass", startDate: new Date(2022, 9) },
     { id: 2, value: "React", startDate: new Date(2023, 0) },
-    { id: 3, value: "React Native", startDate: new Date(2023, 3) },
+    { id: 3, value: "React Native", startDate: new Date(2023, 2) },
   ]);
 
   useEffect(() => {
@@ -37,9 +37,9 @@ const Languages = () => {
   return (
     <div className="languagesFrameworks">
       <ProgressBar
-        languages={languages.map((lang) => ({
-          ...lang,
-          xp: lang.xp + " mois",
+        languages={languages.map((language) => ({
+          ...language,
+          xp: language.xp + " mois",
         }))}
         className="languageDisplay"
         title="Langages"

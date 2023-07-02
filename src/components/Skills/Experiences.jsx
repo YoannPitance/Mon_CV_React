@@ -6,22 +6,40 @@ const Experiences = () => {
       <h3>Expériences</h3>
       <div className="exp-1">
         <h4>Etudes développeur web chez OPENCLASSROOMS</h4>
-        <h5>sept-2022 à mai-2023</h5>
+        <h5>Sept-2022 à mai-2023</h5>
         <p>
-          Apprentissages par projets de HTML5, CSS3, JAVASCRIPT, REACT etc... -
-          Intégration et et mise en place de la partie Front End d'un site. -
-          Utilisation de Reacts et de ses composants pour des projets plus
-          modulables. - Création et mise en place de petites animations et
-          transitions en CSS. - Utilisation de CSS et SASS. - Mise en place
-          dynamique d'un visuel de site e-commerce avec gestion
-          panier/produits/API. - Création gestion et sécurisation d'une API. -
-          Optimisation de SEO de référencement et de performances avec audit et
-          rapport.
+          <ul>
+            <li>
+              Apprentissages par projets de HTML5, CSS3, JAVASCRIPT, REACT
+              etc...
+            </li>
+            <li>
+              Intégration et et mise en place de la partie Front End d'un site.
+            </li>
+            <li>
+              Utilisation de React et de ses composants pour des projets plus
+              modulables.
+            </li>
+            <li>
+              Création et mise en place de petites animations et transitions en
+              CSS.
+            </li>
+            <li>Utilisation de CSS et SASS.</li>
+            <li>
+              Mise en place dynamique d'un visuel de site e-commerce avec
+              gestion panier/produits/API.
+            </li>
+            <li>Création gestion et sécurisation d'une API.</li>
+            <li>
+              Optimisation de SEO de référencement et de performances avec audit
+              et rapport.
+            </li>
+          </ul>
         </p>
       </div>
       <div className="exp-2">
         <h4>Recherche Alternance PHP ou React/JS</h4>
-        <h5>avril-202 à maintenant</h5>
+        <h5>Mai-2023 à maintenant</h5>
         <p>
           Je continue mon apprentissage en totale autonomie jusqu'à trouver un
           contrat de professionalisation. En attendant je travail sur des

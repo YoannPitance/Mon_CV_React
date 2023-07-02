@@ -15,12 +15,22 @@ const ProgressBar = (languages) => {
 
   const calculateDisplayExperience = (experience) => {
     if (experience < 24) {
-      return `0 - 2 ans`;
+      return (
+        <>
+          <span>0</span>
+          <span>2 ans</span>
+        </>
+      );
     } else {
       const startYear = Math.floor((experience - 12) / 12);
       const endYear = Math.floor(experience / 12);
 
-      return `${startYear} - ${endYear} ans`;
+      return (
+        <>
+          <span>{startYear} ans</span>
+          <span>{endYear} ans</span>
+        </>
+      );
     }
   };
 
@@ -54,7 +64,6 @@ const ProgressBar = (languages) => {
                   className="progressBarFill"
                   style={{
                     width: `${progressBarWidth}%`,
-                    transition: "width 0.5s ease-in-out",
                   }}
                 ></div>
                 <div className="progressBarEmpty"></div>

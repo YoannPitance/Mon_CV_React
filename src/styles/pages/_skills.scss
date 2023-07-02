@@ -76,41 +76,73 @@
             li{
                 color: $color-1;
             }
+
+            h4{
+                font-size: 1.2rem;
+            }
             .progressBar{
-                height: 0.4rem;
+                height: 1.5rem;
                 background: transparent;
                 border-radius: 50px;
                 margin-top: 0.2rem;
-                position: relative;
+                position: relative;   
+                
+                span{
+                    display: flex;
+                    justify-content: space-between;
+                    font-weight: 600;
+                }
 
-                &:after{
-                    content: "";
+                .progressBarEmpty{
+                    width: 100%;
+                    height: 1rem;
+                    background-color: rgb(221, 221, 221, 0.7);
+                    border-radius: 0px 10px 10px 0px;
+                    border: 1px solid $color-2;
+                }
+
+                .progressBarFill{
+                    height: 1rem;
+                    background-color: transparent;
                     position: absolute;
-                    background: $color-2;
-                    border-radius: 50px;
-                    height: 0.4rem;                    
-                    -webkit-animation: progress 2s ease-out forwards;
-                            animation: progress 2s ease-out forwards;                                
-                                       
-                    @-webkit-keyframes progress {
-                        0%{
-                            width: 0%;
-                        }
-                        100%{
-                            width: 100%;
-                        }
-                        
-                    }                                
-                                       
-                    @keyframes progress {
-                        0%{
-                            width: 0%;
-                        }
-                        100%{
-                            width: 100%;
-                        }
-                        
-                    }
+                    z-index: 3;
+                    
+                    
+                    &:after{
+                        content: "";
+                        position: absolute;
+                        border-radius: 0px 10px 10px 0px;
+                        background-color: #d38c12;
+                        box-shadow: 0 0 3px #d38c12,
+                                    0 0 6px #d38c12,
+                                    0 0 12px #d38c12;
+                                    border: 1px solid #9e5b04;
+                                    height: 1rem;                    
+                                    -webkit-animation: progress 2s ease-out forwards;
+                                            animation: progress 2s ease-out forwards;                                
+                                                       
+                                    @-webkit-keyframes progress {
+                                        0%{
+                                            width: 0%;
+                                        }
+                                        100%{
+                                            width: 100%;
+                                        }
+                                        
+                                    }                                
+                                                       
+                                    @keyframes progress {
+                                        0%{
+                                            width: 0%;
+                                        }
+                                        100%{
+                                            width: 100%;
+                                        }
+                                        
+                                    }
+                
+                                    
+                                }
                 }
             }
         }
@@ -144,7 +176,14 @@
         }
         p{
             text-align: justify;
+            font-size: 1.05rem;
             padding: 0 1rem;
+
+            ul{
+                li{
+                    list-style-type: circle;
+                }
+            }
         }
         .exp-1{
             grid-area: 2;
